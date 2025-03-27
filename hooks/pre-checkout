@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -xeuo pipefail
 
-GIT_LFS_RELEASE="3.6.1"
-
-curl -Lsf -o git-lfs.tgz https://github.com/git-lfs/git-lfs/releases/download/v${GIT_LFS_RELEASE}/git-lfs-linux-amd64-v${GIT_LFS_RELEASE}.tar.gz \
-    && mkdir git-lfs-dir \
-    && tar --strip-components 1 -xvzf git-lfs.tgz -C git-lfs-dir \
-    && mv git-lfs-dir/git-lfs /usr/local/bin/
-
-git lfs install
+apk update && apk add --no-cache \
+        build-base \
+        git \
+        git-lfs
 
 echo "Installed"
 
