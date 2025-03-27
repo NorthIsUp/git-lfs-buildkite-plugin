@@ -9,8 +9,6 @@ curl -Lsf -o git-lfs.tgz https://github.com/git-lfs/git-lfs/releases/download/v$
     && tar --strip-components 1 -xvzf git-lfs.tgz -C git-lfs-dir \
     && mv git-lfs-dir/git-lfs /usr/local/bin/
 
-cat /usr/local/bin/git-lfs
-
 git lfs install
 
 echo "Installed"
