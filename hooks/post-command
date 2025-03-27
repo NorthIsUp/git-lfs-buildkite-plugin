@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-GIT_LFS_RELEASE="2.6.1"
+GIT_LFS_RELEASE="3.6.1"
 
 mkdir .gitlfs/
 export PATH=$PATH:.gitlfs/
