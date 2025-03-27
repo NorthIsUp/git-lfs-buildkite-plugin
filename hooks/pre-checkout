@@ -9,7 +9,7 @@ which -v git-lfs >/dev/null \
     https://github.com/git-lfs/git-lfs/releases/download/v${GIT_LFS_RELEASE}/git-lfs-linux-amd64-v${GIT_LFS_RELEASE}.tar.gz \
   && mkdir git-lfs-dir \
   && tar --strip-components 1 -xvzf git-lfs.tgz -C git-lfs-dir \
-  && ./git-lfs/install.sh \
+  && ./git-lfs-dir/install.sh \
 
 cat /usr/local/bin/git-lfs
 
