@@ -1,4 +1,4 @@
 name: Git LFS
 description: A Buildkite plugin to install LFS
-author: https://github.com/dtbaker
+author: https://github.com/northisup
 requirements: []
