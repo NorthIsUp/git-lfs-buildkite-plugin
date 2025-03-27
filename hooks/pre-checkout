@@ -2,7 +2,7 @@
 
 set -xeuo pipefail
 
-apk update && apk add --no-cache \
+which git-lfs >/dev/null || apk update && apk add --no-cache \
   git \
   git-lfs
 
