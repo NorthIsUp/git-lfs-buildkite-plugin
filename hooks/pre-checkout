@@ -3,13 +3,7 @@
 set -xeuo pipefail
 
 apk update && apk add --no-cache \
-        build-base \
-        git \
-        git-lfs
-
-echo "Installed"
-
-#https://github.com/git-lfs/git-lfs/issues/2291#issuecomment-305887405
-rm .git/hooks/pre-push
+  git \
+  git-lfs
 
 git lfs install
