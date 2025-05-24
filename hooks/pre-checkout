@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 set -xeuo pipefail
+sleep 10000
 command -v git-lfs >/dev/null && git-lfs install
