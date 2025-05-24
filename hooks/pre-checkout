@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 set -xeuo pipefail
-git lfs install
+command -v git-lfs >/dev/null && git-lfs install
