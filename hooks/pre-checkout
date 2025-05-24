@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
 set -xeuo pipefail
-sleep 10000
-command -v git-lfs >/dev/null && git-lfs install
+
+if ! command -v git-lfs >/dev/null ; then
+  if command -v apk >/dev/null ; then
+    apk add git-lfs --no-cache
+  fi
+fi
+
+git-lfs install
